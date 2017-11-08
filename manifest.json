@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "MoveTabs",
+  "description": "Move certain tabs to one side of the browser",
+  "version": "1.0",
+
+  // "browser_action": {
+  //   "default_popup": "index.html"
+  // },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "options_page": "options.html",
+
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+
+  "commands": {
+    "moveTabs": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Move tabs"
+    }
+  }
+}

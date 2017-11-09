@@ -20,16 +20,19 @@ function populateList() {
 
 function addFilterToList(filter) {
     const filterListElem = document.createElement('li');
-    const spanElem = document.createElement('span');
+    // const spanElem = document.createElement('span');
     const textElem = document.createElement('p');
     const buttonElem = document.createElement('button');
 
+    filterListElem.classList.add('list-group-item');
     textElem.innerHTML = filter;
-    buttonElem.innerHTML = 'delete';
+    buttonElem.innerHTML = 'remove';
     buttonElem.onclick = e => { removeFilter(e.target); }
-    spanElem.appendChild(textElem);
-    spanElem.appendChild(buttonElem);
-    filterListElem.appendChild(spanElem);
+    // spanElem.appendChild(textElem);
+    // spanElem.appendChild(buttonElem);
+    // filterListElem.appendChild(spanElem);
+    filterListElem.appendChild(textElem);
+    filterListElem.appendChild(buttonElem);
     listElem.appendChild(filterListElem);
 
     

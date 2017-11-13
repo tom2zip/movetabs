@@ -24,9 +24,10 @@ function addFilterToList(filter) {
     const textElem = document.createElement('p');
     const buttonElem = document.createElement('button');
 
-    filterListElem.classList.add('list-group-item');
+    filterListElem.className += 'list-group-item';
     textElem.innerHTML = filter;
-    buttonElem.innerHTML = 'remove';
+    buttonElem.innerHTML = 'Remove';
+    buttonElem.className += 'btn btn-outline-danger btn-sm';
     buttonElem.onclick = e => { removeFilter(e.target); };
     // spanElem.appendChild(textElem);
     // spanElem.appendChild(buttonElem);

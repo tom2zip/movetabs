@@ -1,3 +1,16 @@
+button {
+    cursor: pointer;
+}
+
+.row > h1, .row > p {
+    width: 100%;
+    text-align: center;
+}
+
+#filter-list {/*
+    width: 500px;
+}*/
+
 .list-group-item {
     display: flex;
     justify-content: space-around;

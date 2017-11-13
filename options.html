@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <span>
-        <input id="filter-text" type="text">
-        <button id="add-button">Add</button>
-    </span>
-    <ul id="filter-list" class="list-group"></ul>
+    <div class="container">
+        <div class="row">
+            <h1>MoveTabs</h1>
+            <p>Press Alt + Q to move these tabs to the left side of the browser</p>
+        </div>
+        <div class="row">
+            <input id="filter-text" type="text">
+            <button id="add-button" class="btn btn-primary btn-sm">Add</button>
+        </div>
+        <div class="row">
+            <ul id="filter-list" class="list-group"></ul>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>

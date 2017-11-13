@@ -27,7 +27,7 @@ function addFilterToList(filter) {
     filterListElem.classList.add('list-group-item');
     textElem.innerHTML = filter;
     buttonElem.innerHTML = 'remove';
-    buttonElem.onclick = e => { removeFilter(e.target); }
+    buttonElem.onclick = e => { removeFilter(e.target); };
     // spanElem.appendChild(textElem);
     // spanElem.appendChild(buttonElem);
     // filterListElem.appendChild(spanElem);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addFilterToStorage(input.value);
             input.value = '';
         }
-    }
+    };
 
     // initialize tab filters variable
     chrome.storage.local.get('tab-filters', items => {

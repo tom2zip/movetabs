@@ -1,5 +1,6 @@
 body {
     background-color: #ced4da;
+    font-family: 'Arimo', sans-serif;
     height: 100%;
 }
 
@@ -15,9 +16,18 @@ button {
     justify-content: center;
 }
 
-.title {
+.center-text {
     text-align: center;
     width: 100%;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.form-inline {
+    margin-top: 16px;
 }
 
 .filter-list {
@@ -33,8 +43,7 @@ button {
 }
 
 .filter-name {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 100;
+    font-family: 'Inconsolata', monospace;
     margin-left: 4px;
-    margin-right: 10px;
+    margin-right: 20px;
 }

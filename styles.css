@@ -32,6 +32,8 @@ button {
     padding: 5px 10px;
 }
 
-.filter-block > h1 {
+.filter-name {
     font-weight: 100;
+    margin-left: 4px;
+    margin-right: 10px;
 }

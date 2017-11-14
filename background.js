@@ -1,6 +1,4 @@
-let filters = {};
-
-updateFilters();
+let filters;
 
 function updateFilters() {
     chrome.storage.local.get('tab-filters', items => {
@@ -8,10 +6,16 @@ function updateFilters() {
     });
 }
 
+// to fill the filters list initially
+updateFilters();
+
+// update list dom for every change in the storage
 chrome.storage.onChanged.addListener(() => {
     updateFilters();
 });
 
+
+// move any tab with any filter in its url
 chrome.commands.onCommand.addListener(() => {
     chrome.windows.getCurrent({ populate: true }, window => {
         const tabIds = [];
@@ -23,8 +27,9 @@ chrome.commands.onCommand.addListener(() => {
             });
         });
 
+        // move to their respective positions in the tabIds array
         tabIds.forEach((tab, index) => {
-          chrome.tabs.move(tab, { index });
+            chrome.tabs.move(tab, { index });
         });
     });
 });

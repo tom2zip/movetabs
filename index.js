@@ -1,5 +1,4 @@
 const listElem = document.getElementById('filter-list');
-const input = document.getElementById('filter-text');
 let tabFilters;
 
 // empty objects are not truthy...
@@ -61,7 +60,9 @@ function removeFilter(elem) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('add-button').onclick = () => {
+    document.getElementById('add-form').onsubmit = event => {
+        event.preventDefault();
+        const input = document.getElementById('filter-text');
         if (input.value) {
             addFilterToList(input.value);
             addFilterToStorage(input.value);

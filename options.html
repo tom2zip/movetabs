@@ -4,6 +4,7 @@
     <title>MoveTabs</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,8 +14,12 @@
             <p class="title">Press Alt + Q to move these tabs to the left side of the browser</p>
         </div>
         <div class="row">
-            <input id="filter-text" type="text">
-            <button id="add-button" class="btn btn-primary btn-sm">Add</button>
+            <form id="add-form" class="form-inline">
+                <div class="input-group">
+                    <input id="filter-text" type="text" class="form-control" placeholder="reddit">
+                </div>
+                <button type="submit" class="btn btn-info">Add</button>
+            </form>
         </div>
         <div class="row filter-list" id="filter-list"></div>
     </div>

@@ -33,6 +33,7 @@ button {
 }
 
 .filter-name {
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 100;
     margin-left: 4px;
     margin-right: 10px;

@@ -19,24 +19,24 @@ function populateList() {
 }
 
 function addFilterToList(filter) {
-    const filterListElem = document.createElement('li');
-    // const spanElem = document.createElement('span');
-    const textElem = document.createElement('p');
-    const buttonElem = document.createElement('button');
+    const blockDiv = document.createElement('div');
+    blockDiv.className += 'filter-block';
 
-    filterListElem.className += 'list-group-item';
-    textElem.innerHTML = filter;
-    buttonElem.innerHTML = 'Remove';
-    buttonElem.className += 'btn btn-outline-danger btn-sm';
-    buttonElem.onclick = e => { removeFilter(e.target); };
-    // spanElem.appendChild(textElem);
-    // spanElem.appendChild(buttonElem);
-    // filterListElem.appendChild(spanElem);
-    filterListElem.appendChild(textElem);
-    filterListElem.appendChild(buttonElem);
-    listElem.appendChild(filterListElem);
+    const filterName = document.createElement('h1');
+    filterName.innerHTML = filter;
 
-    
+    const removeButton = document.createElement('button');
+    removeButton.type = 'button';
+    removeButton.className += 'close';
+    removeButton.onclick = e => { removeFilter(e.target); };
+
+    const xSpan = document.createElement('span');
+    xSpan.innerHTML = '&times;';
+
+    removeButton.appendChild(xSpan);
+    blockDiv.appendChild(filterName);
+    blockDiv.appendChild(removeButton);
+    listElem.appendChild(blockDiv);    
 }
 
 function addFilterToStorage(filter) {

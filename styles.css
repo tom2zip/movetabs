@@ -1,17 +1,37 @@
+body {
+    background-color: #ced4da;
+    height: 100%;
+}
+
 button {
     cursor: pointer;
 }
 
-.row > h1, .row > p {
-    width: 100%;
-    text-align: center;
+.container {
+    padding: 100px 50px;
 }
 
-#filter-list {/*
-    width: 500px;
-}*/
+.row {
+    justify-content: center;
+}
 
-.list-group-item {
+.title {
+    text-align: center;
+    width: 100%;
+}
+
+.filter-list {
+    margin-top: 50px;
+}
+
+.filter-block {
+    background: #f8f9fa;
+    border-radius: 15px;
     display: flex;
-    justify-content: space-around;
+    margin: 10px 5px;
+    padding: 5px 10px;
+}
+
+.filter-block > h1 {
+    font-weight: 100;
 }

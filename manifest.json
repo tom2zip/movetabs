@@ -24,7 +24,8 @@
   "commands": {
     "moveTabs": {
       "suggested_key": {
-        "default": "Alt+Q"
+        "windows": "Alt+Q",
+        "mac": "Command+Q"
       },
       "description": "Move tabs"
     }
